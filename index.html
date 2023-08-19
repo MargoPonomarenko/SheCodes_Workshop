@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f03615c0e1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container body-style">
+      <form class="search-form" id="input-form">
+        <div class="row greeting-table">
+          <div class="col-md-auto user-icon">
+            <i class="fa-solid fa-circle-user"></i>
+          </div>
+          <div class="col-3 greeting">
+            Hi User!<br /><span class="today-date" id="date-display"
+              >Mon, 10 July, 2023</span
+            >
+          </div>
+          <div class="col-3"></div>
+          <div class="col-3">
+            <div class="input-group mb-3">
+              <div class="col-3">
+              <input
+                type="submit"
+                value="🔍"
+                id="button-addon1"
+                class="form-control btn btn-primary search-icon-input"
+                size="1"
+              />
+              </div>
+              <input
+                type="search"
+                placeholder="Search city"
+                autofocus="on"
+                autocomplete="off"
+                id="city-search-input"
+                class="form-control input-field"
+              />
+              </div>
+          </div>
+          <div class="col-2" >
+            <button class="btn btn-primary current-location-btn" id="current-weather">📍 Current </button>
+          </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="container">
+        <div class="row weather-table">
+          <div class="col-1 image-cell">
+            <img src="images/Cloudy.svg" alt="Cloudy weather" width="100" />
+          </div>
+          <div class="col-2 header-table-one ">
+            <span id="current-city-name">Kyiv</span>
+            <div class="subheader-table" id="description-display">Ukraine</div>
+          </div>
+          <div class="col-3 header-table">
+            <span id="degree-number">+14</span
+            ><a href="#" class="degree-link-selected" id="celcium">°C</a>
+            <div class="subheader-table">Temperature</div>
+          </div>
+          <div class="col-2 header-table" >
+            <span id="humidity-number">70</span>%
+            <div class="subheader-table">Hymidity</div>
+          </div>
+          <div class="col-2 header-table">
+            <span id="wind-speed-number">20</span>km/h
+            <div class="subheader-table">Wind speeed</div>
+          </div>
+          <div class="w-100"></div>
+
+          <div class="col weather-cell">
+            <div class="time-style">09 am</div>
+            <i class="fa-solid fa-cloud-sun"></i>
+            <div class="tempo-style">17°C</div>
+          </div>
+          <div class="col weather-cell">
+            <div class="time-style">10 am</div>
+            <i class="fa-solid fa-cloud-sun"></i>
+            <div class="tempo-style">15°C</div>
+          </div>
+          <div class="col weather-cell">
+            <div class="time-style">11 am</div>
+            <i class="fa-solid fa-cloud"></i>
+            <div class="tempo-style">15°C</div>
+          </div>
+          <div class="col weather-cell">
+            <div class="time-style">12 am</div>
+            <i class="fa-solid fa-cloud"></i>
+            <div class="tempo-style">14°C</div>
+          </div>
+          <div class="col weather-cell">
+            <div class="time-style">01 pm</div>
+            <i class="fa-solid fa-cloud-showers-heavy"></i>
+            <div class="tempo-style">14°C</div>
+          </div>
+          <div class="col weather-cell">
+            <div class="time-style">02 pm</div>
+            <i class="fa-solid fa-cloud-showers-heavy"></i>
+            <div class="tempo-style">14°C</div>
+          </div>
+          <div class="col weather-cell">
+            <div class="time-style">03 pm</div>
+            <i class="fa-solid fa-cloud-showers-heavy"></i>
+            <div class="tempo-style">14°C</div>
+          </div>
+          <div class="col weather-cell">
+            <div class="time-style">04 pm</div>
+            <i class="fa-solid fa-cloud"></i>
+            <div class="tempo-style">14°C</div>
+          </div>
+          <div class="col weather-cell">
+            <div class="time-style">05 pm</div>
+            <i class="fa-solid fa-cloud"></i>
+            <div class="tempo-style">14°C</div>
+          </div>
+          <div class="col weather-cell">
+            <div class="time-style">06 pm</div>
+            <i class="fa-solid fa-cloud"></i>
+            <div class="tempo-style">13°C</div>
+          </div>
+          <div class="col weather-cell">
+            <div class="time-style">07 pm</div>
+            <i class="fa-solid fa-cloud"></i>
+            <div class="tempo-style">13°C</div>
+          </div>
+          <div class="col weather-cell">
+            <div class="time-style">08 pm</div>
+            <i class="fa-solid fa-cloud-moon"></i>
+            <div class="tempo-style">10°C</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>

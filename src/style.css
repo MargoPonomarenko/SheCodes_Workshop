@@ -1,0 +1,142 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #1e1f24;
+}
+
+.greeting-table {
+  margin-top: 32px;
+  margin-left: 0;
+}
+
+.user-icon {
+  font-size: 28px;
+  text-align: center;
+  padding: 8px 16px 8px 0px;
+}
+
+.greeting {
+  font-weight: 200;
+  font-size: 14px;
+  padding: 0;
+}
+
+.search-icon {
+  color: #e4edf2;
+}
+
+.search-icon-input {
+  background-color: #2a2d36;
+  border-color: #3c3c44;
+
+  border-radius: 20px 0px 0px 20px;
+}
+
+.current-location-btn {
+  background-color: #2a2d36;
+  border-color: #3c3c44;
+  border-radius: 20px;
+  color: #e4edf2;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.form-control {
+  background-color: #2a2d36;
+  color: #e4edf2;
+  font-size: 14px;
+  font-weight: 200;
+  border-color: #3c3c44;
+}
+
+.input-field {
+  border-radius: 20px;
+}
+
+.body-style {
+  margin: 0 auto;
+  display: block;
+}
+
+.container {
+  padding: 0;
+}
+
+.weather-table {
+  background-color: #2e2e38;
+  border: 2px solid;
+  border-color: #3c3c44;
+  padding: 16px 32px;
+  border-radius: 40px;
+  margin: 32px 0px 32px 0px;
+}
+
+.header-table {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: left;
+  padding: 0px 40px 0px 40px;
+  margin-bottom: 24px;
+}
+
+.subheader-table {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.header-table-one {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: left;
+  padding: 0px 40px 0px 40px;
+}
+
+.image-cell {
+  padding: 0;
+}
+
+.today-date {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.weather-cell {
+  background-color: #cceaec;
+  color: #1e1f24;
+  border-radius: 32px;
+  margin: 0px 12px;
+  padding: 6px 2px;
+  text-align: center;
+}
+
+.time-style {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 6px 0px;
+}
+
+.tempo-style {
+  font-weight: 500;
+  font-size: 16px;
+  padding: 6px 0px;
+}
+
+.form-control::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.form-control:focus {
+  background-color: #2e2e38;
+  border: 2px solid;
+  border-color: #3c3c44;
+  color: #e4edf2;
+  font-weight: 400;
+}
+
+.degree-link-selected {
+  font-size: 40px;
+  text-decoration: none;
+  color: #e4edf2;
+}
