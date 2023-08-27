@@ -53,6 +53,13 @@ function displayWeather(response) {
   let wind = response.data.wind.speed;
   let windSpeedElement = document.querySelector("#wind-speed-number");
   windSpeedElement.innerHTML = Math.round(wind * 3.6);
+
+  let icon = response.data.weather[0].icon;
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
 }
 
 let apiKey = "8161b4309ee03faae957729ba7104797";
@@ -77,6 +84,7 @@ let searchButton = document.querySelector("#input-form");
 searchButton.addEventListener("submit", searchCity);
 
 function displayCurrent(response) {
+  console.log(response.data);
   let city = response.data.name;
   let cityElement = document.querySelector("#current-city-name");
   cityElement.innerHTML = city;
@@ -96,6 +104,13 @@ function displayCurrent(response) {
   let wind = response.data.wind.speed;
   let windSpeedElement = document.querySelector("#wind-speed-number");
   windSpeedElement.innerHTML = Math.round(wind * 3.6);
+
+  let icon = response.data.weather[0].icon;
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
 }
 
 function showPosition(position) {
