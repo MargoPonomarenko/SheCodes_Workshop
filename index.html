@@ -30,41 +30,41 @@
   <body>
     <div class="container body-style">
       <form class="search-form" id="input-form">
-        <div class="row greeting-table">
-          <div class="col-md-auto user-icon">
-            <i class="fa-solid fa-circle-user"></i>
+        <div class="grid">
+          <div><div class="col-md-auto user-icon">
+            <i class="fa-solid fa-circle-user"></i></div>
           </div>
-          <div class="col-3 greeting">
+          <div>
+            <div class="greeting">
             Hi User!<br /><span class="today-date" id="date-display"
-              >Mon, 10 July, 2023</span
-            >
+              >Mon, 10 July, 2023</span>
+            </div>
           </div>
-          <div class="col-3"></div>
-          <div class="col-3">
-            <div class="input-group mb-3">
-              <div class="col-3">
-              <input
+          <div></div>
+          <div id="inner-grid">
+            <div>
+            <input
                 type="submit"
                 value="🔍"
                 id="button-addon1"
-                class="form-control btn btn-primary search-icon-input"
-                size="1"
-              />
-              </div>
-              <input
+                class="btn btn-primary search-icon-input custom-control"
+            />
+            </div>
+            <div>
+            <input
                 type="search"
                 placeholder="Search city"
                 autofocus="on"
                 autocomplete="off"
                 id="city-search-input"
-                class="form-control input-field"
-              />
-              </div>
+                class="form-control input-field custom-control"
+            />
+            </div>
           </div>
-          <div class="col-2" >
+          <div id="align-grid">
             <button class="btn btn-primary current-location-btn" id="current-weather">📍 Current </button>
           </div>
-          </div>
+        </div>
         </div>
       </form>
 
@@ -89,68 +89,6 @@
           <div class="col-2 header-table">
             <span id="wind-speed-number">20</span>km/h
             <div class="subheader-table">Wind speeed</div>
-          </div>
-          <div class="w-100"></div>
-
-          <div class="col weather-cell">
-            <div class="time-style">09 am</div>
-            <i class="fa-solid fa-cloud-sun"></i>
-            <div class="tempo-style">17°C</div>
-          </div>
-          <div class="col weather-cell">
-            <div class="time-style">10 am</div>
-            <i class="fa-solid fa-cloud-sun"></i>
-            <div class="tempo-style">15°C</div>
-          </div>
-          <div class="col weather-cell">
-            <div class="time-style">11 am</div>
-            <i class="fa-solid fa-cloud"></i>
-            <div class="tempo-style">15°C</div>
-          </div>
-          <div class="col weather-cell">
-            <div class="time-style">12 am</div>
-            <i class="fa-solid fa-cloud"></i>
-            <div class="tempo-style">14°C</div>
-          </div>
-          <div class="col weather-cell">
-            <div class="time-style">01 pm</div>
-            <i class="fa-solid fa-cloud-showers-heavy"></i>
-            <div class="tempo-style">14°C</div>
-          </div>
-          <div class="col weather-cell">
-            <div class="time-style">02 pm</div>
-            <i class="fa-solid fa-cloud-showers-heavy"></i>
-            <div class="tempo-style">14°C</div>
-          </div>
-          <div class="col weather-cell">
-            <div class="time-style">03 pm</div>
-            <i class="fa-solid fa-cloud-showers-heavy"></i>
-            <div class="tempo-style">14°C</div>
-          </div>
-          <div class="col weather-cell">
-            <div class="time-style">04 pm</div>
-            <i class="fa-solid fa-cloud"></i>
-            <div class="tempo-style">14°C</div>
-          </div>
-          <div class="col weather-cell">
-            <div class="time-style">05 pm</div>
-            <i class="fa-solid fa-cloud"></i>
-            <div class="tempo-style">14°C</div>
-          </div>
-          <div class="col weather-cell">
-            <div class="time-style">06 pm</div>
-            <i class="fa-solid fa-cloud"></i>
-            <div class="tempo-style">13°C</div>
-          </div>
-          <div class="col weather-cell">
-            <div class="time-style">07 pm</div>
-            <i class="fa-solid fa-cloud"></i>
-            <div class="tempo-style">13°C</div>
-          </div>
-          <div class="col weather-cell">
-            <div class="time-style">08 pm</div>
-            <i class="fa-solid fa-cloud-moon"></i>
-            <div class="tempo-style">10°C</div>
           </div>
         </div>
         <a href="https://github.com/MargoPonomarenko/Weather_app_SheCodes">Open-source code</a>

@@ -28,7 +28,7 @@ body {
 .search-icon-input {
   background-color: #2a2d36;
   border-color: #3c3c44;
-
+  width: 70px;
   border-radius: 20px 0px 0px 20px;
 }
 
@@ -39,18 +39,11 @@ body {
   color: #e4edf2;
   font-size: 14px;
   font-weight: 400;
-}
-
-.form-control {
-  background-color: #2a2d36;
-  color: #e4edf2;
-  font-size: 14px;
-  font-weight: 200;
-  border-color: #3c3c44;
+  justify-self: end;
 }
 
 .input-field {
-  border-radius: 20px;
+  border-radius: 0px 20px 20px 0px;
 }
 
 .body-style {
@@ -122,12 +115,46 @@ body {
   padding: 6px 0px;
 }
 
-.form-control::placeholder {
-  color: white;
-  opacity: 1;
+.degree-link-selected {
+  font-size: 40px;
+  text-decoration: none;
+  color: #e4edf2;
 }
 
-.form-control:focus {
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 28px 0.6fr 0.6fr 0.6fr 0.2fr;
+  margin-top: 32px;
+}
+
+.grid > div {
+  height: 60px;
+}
+
+#inner-grid {
+  display: grid;
+  grid-template-columns: 70px auto;
+  grid-gap: 0px;
+  justify-self: end;
+}
+
+#align-grid {
+  justify-self: end;
+}
+
+.custom-control {
+  background-color: #2a2d36;
+  color: #e4edf2;
+  font-size: 14px;
+  font-weight: 200;
+  border-color: #3c3c44;
+  display: inline;
+  margin: 0;
+  justify-self: end;
+}
+
+.custom-control:focus {
   background-color: #2e2e38;
   border: 2px solid;
   border-color: #3c3c44;
@@ -135,8 +162,12 @@ body {
   font-weight: 400;
 }
 
-.degree-link-selected {
-  font-size: 40px;
-  text-decoration: none;
-  color: #e4edf2;
+.custom-control::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.form-control {
+  display: inline;
+  width: 230px;
 }
