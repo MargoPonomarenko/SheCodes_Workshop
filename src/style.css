@@ -171,3 +171,20 @@ body {
   display: inline;
   width: 230px;
 }
+
+.degree-link {
+  font-size: 20px;
+  text-decoration: none;
+  color: #9d73fa;
+  position: absolute;
+  left: 620px;
+  top: 162px;
+}
+
+.degree-link-selected {
+  font-size: 40px;
+  text-decoration: none;
+  color: #e4edf2;
+  position: absolute;
+  left: 570px;
+}

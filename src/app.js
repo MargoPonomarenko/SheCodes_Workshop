@@ -70,6 +70,7 @@ function searchCity(event) {
   let cityName = cityRequest.value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
+  changeToCelcium();
 }
 
 let searchButton = document.querySelector("#input-form");
@@ -111,3 +112,49 @@ function showCurrentWeather() {
 
 let currentButton = document.querySelector("#current-weather");
 currentButton.addEventListener("click", showCurrentWeather);
+
+function displayTemerature(response) {
+  let temperature = Math.round(response.data.main.temp);
+  let currentDegree = document.querySelector("#degree-number");
+  currentDegree.innerHTML = `+${temperature}`;
+}
+
+function changeToFarenheit() {
+  let currentDegree = document.querySelector("#degree-number");
+  let apiKey = "8161b4309ee03faae957729ba7104797";
+  let cityName = document.querySelector("#current-city-name").textContent;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayTemerature);
+
+  let celcium = document.querySelector("#celcium");
+  celcium.classList.remove("degree-link-selected");
+  celcium.classList.add("degree-link");
+
+  let farenheit = document.querySelector("#farenheit");
+  farenheit.classList.remove("degree-link");
+  farenheit.classList.add("degree-link-selected");
+}
+
+let farenheitLink = document.querySelector("#farenheit");
+farenheitLink.addEventListener("click", changeToFarenheit);
+
+function changeToCelcium() {
+  let apiKey = "8161b4309ee03faae957729ba7104797";
+  let cityName = document.querySelector("#current-city-name").textContent;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemerature);
+
+  let currentDegree = document.querySelector("#degree-number");
+  currentDegree.innerHTML = "+14";
+
+  let celcium = document.querySelector("#celcium");
+  celcium.classList.remove("degree-link");
+  celcium.classList.add("degree-link-selected");
+
+  let farenheit = document.querySelector("#farenheit");
+  farenheit.classList.remove("degree-link-selected");
+  farenheit.classList.add("degree-link");
+}
+
+let celciumLink = document.querySelector("#celcium");
+celciumLink.addEventListener("click", changeToCelcium);
