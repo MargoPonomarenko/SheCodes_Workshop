@@ -95,7 +95,7 @@ body {
 }
 
 .weather-cell {
-  background-color: #cceaec;
+  background-color: #ababd1;
   color: #1e1f24;
   border-radius: 32px;
   margin: 0px 12px;
@@ -117,7 +117,7 @@ body {
 
 .min-tempo-style {
   font-weight: 500;
-  opacity: 0.5;
+  opacity: 0.6;
   font-size: 16px;
   padding: 6px 0px;
 }
