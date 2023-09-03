@@ -62,6 +62,32 @@ function displayWeather(response) {
   );
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  let forecastHTML = `<div class="grid-forecast">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="weather-cell">
+        <div class="week-day-style">${day}</div>
+                <div><i class="fa-solid fa-cloud-sun"></i></div>
+                <span class="max-tempo-style">17°C</span>
+                <span class="min-tempo-style">10°C</span>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
+displayForecast();
+
 let apiKey = "8161b4309ee03faae957729ba7104797";
 let cityName = document.querySelector("#current-city-name").textContent;
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;

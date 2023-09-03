@@ -152,7 +152,8 @@ body {
 
 .grid-forecast {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  gap: 1rem;
+  grid-template-columns: repeat(6, auto);
 }
 
 .custom-control {
