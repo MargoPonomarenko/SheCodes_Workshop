@@ -103,14 +103,21 @@ body {
   text-align: center;
 }
 
-.time-style {
-  font-weight: 400;
-  font-size: 14px;
+.week-day-style {
+  font-weight: 500;
+  font-size: 20px;
   padding: 6px 0px;
 }
 
-.tempo-style {
+.max-tempo-style {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 0px;
+}
+
+.min-tempo-style {
   font-weight: 500;
+  opacity: 0.5;
   font-size: 16px;
   padding: 6px 0px;
 }
@@ -141,6 +148,11 @@ body {
 
 #align-grid {
   justify-self: end;
+}
+
+.grid-forecast {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
 }
 
 .custom-control {
