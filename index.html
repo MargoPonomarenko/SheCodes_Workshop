@@ -69,27 +69,33 @@
       </form>
 
       <div class="container">
-        <div class="row weather-table">
-          <div class="col-1 image-cell">
-            <img src="images/Cloudy.svg" alt="Cloudy weather" id="weather-icon" width="100" />
-          </div>
-          <div class="col-2 header-table-one ">
-            <span id="current-city-name">Kyiv</span>
-            <div class="subheader-table" id="description-display">Ukraine</div>
-          </div>
-          <div class="col-3 header-table">
-            <span id="degree-number">+14</span
-            ><a href="#" class="degree-link-selected" id="celcium">°C</a>
-            <a href="#" class="degree-link" id="farenheit">°F</a>
+        <div class="weather-table">
+          <div class="container header-table-one">
+            <div class="grid-weather">
+              <div class="image-cell">
+              <img src="images/Cloudy.svg" alt="Cloudy weather" id="weather-icon" width="100" />
+            </div>
+            <div class="header-table">
+              <span id="current-city-name">Kyiv</span>
+              <div class="subheader-table" id="description-display">Ukraine</div>
+            </div>
+          <div class="header-table">
+            <span id="degree-number">+14</span>
+            <span>
+              <a href="#" class="degree-link-selected" id="celcium" onclick="swapLink(event,this);">°C </a>
+              <a href="#" class="degree-link" id="farenheit" onclick="swapLink(event,this);">°F </a>
+            </span>
             <div class="subheader-table">Temperature</div>
           </div>
-          <div class="col-2 header-table" >
+          <div class="header-table" >
             <span id="humidity-number">70</span>%
             <div class="subheader-table">Hymidity</div>
           </div>
-          <div class="col-2 header-table">
+          <div class="header-table">
             <span id="wind-speed-number">20</span>km/h
             <div class="subheader-table">Wind speeed</div>
+          </div>
+            </div>
           </div>
           <div class="container" id="forecast"></div>
         </div>
