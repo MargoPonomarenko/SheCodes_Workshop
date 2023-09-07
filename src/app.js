@@ -211,3 +211,7 @@ function changeToCelcium() {
 
 let celciumLink = document.querySelector("#celcium");
 celciumLink.addEventListener("click", changeToCelcium);
+
+function swapLink(event, elem) {
+  elem.parentNode.insertBefore(elem, elem.parentNode.firstChild);
+}
