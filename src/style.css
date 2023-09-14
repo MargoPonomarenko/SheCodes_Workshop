@@ -98,10 +98,11 @@ body {
 }
 
 .weather-cell {
-  background-color: #ababd1;
+  background-color: #d1c6f3;
   color: #1e1f24;
   border-radius: 32px;
   text-align: center;
+  margin: 0 15px;
 }
 
 .week-day-style {
